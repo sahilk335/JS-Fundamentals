@@ -17,6 +17,8 @@ function getPosts() {
             output += `<li>${post.title}</li>`;
         });
         document.body.innerHTML = output;
-        
-    }, 1000);
+    
+    }, 2000);
 }
+
+getPosts();
