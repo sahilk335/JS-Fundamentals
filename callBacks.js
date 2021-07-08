@@ -17,8 +17,22 @@ function getPosts() {
             output += `<li>${post.title}</li>`;
         });
         document.body.innerHTML = output;
-    
+
     }, 2000);
 }
 
+function createPost(post,callback) {
+    setTimeout(() => {
+        posts.push(post);
+        callback();
+    }, 3000);
+
+}
+
+
 getPosts();
+
+createPost({
+    title: 'Posts3',
+    body: 'This is post3'
+},getPosts);
